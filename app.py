@@ -11,18 +11,18 @@ st.set_page_config(
 @st.cache_resource
 def charger_modeles():
     return {
-        "Anglais": (
-            joblib.load("himaya_modeles/modele_anglais.pkl"),
-            joblib.load("himaya_modeles/tfidf_anglais.pkl")
-        ),
-        "Français": (
-            joblib.load("himaya_modeles/modele_francais.pkl"),
-            joblib.load("himaya_modeles/tfidf_francais.pkl")
-        ),
-        "Arabe": (
-            joblib.load("himaya_modeles/modele_arabe.pkl"),
-            joblib.load("himaya_modeles/tfidf_arabe.pkl")
-        )
+            "Anglais": (
+        joblib.load("modele_anglais.pkl"),
+        joblib.load("tfidf_anglais.pkl")
+    ),
+    "Français": (
+        joblib.load("modele_francais.pkl"),
+        joblib.load("tfidf_francais.pkl")
+    ),
+    "Arabe": (
+        joblib.load("modele_arabe.pkl"),
+        joblib.load("tfidf_arabe.pkl")
+    )
     }
 
 modeles = charger_modeles()
